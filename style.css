@@ -1,0 +1,582 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* background: linear-gradient(to right, #4f39f6 20%, #ff8a80 80%); */
+    background: #fff;
+    align-items: center;
+    width: 100%;
+height: 100dvh;
+
+}
+.backload{
+    width: 100%;
+    height: 100dvh;
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    
+    z-index: 10;
+    background: #fff;
+}
+
+@keyframes fadeout{
+    0%,50%{
+        z-index: 10;
+        background: #fff;
+    }
+    100%{
+        background: transparent;
+        z-index: 0;
+    }
+}
+
+.backimg{
+    width: 7rem;
+    height: 7rem;
+    color: rgb(0, 119, 204);
+    opacity: 1;
+    
+}
+
+@keyframes fadeoutImg{
+    0%{
+       opacity: 1;
+       transform: translateX(0rem);
+    }
+    50%{
+        opacity: 1;
+        transform: translateX(3rem);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-3rem);
+    }
+}
+.back-head{
+   
+    font-family: "Rajdhani", serif;
+ 
+    color: rgb(108, 117, 125,0.4);
+    font-weight: 500;
+  animation-name: fadeouttxt;
+  animation-duration: 1.5s;
+    
+   
+}
+.bold{
+    background: linear-gradient(135deg,#4f39f6,#ff8a80);
+    background-clip: text;
+    color: transparent;
+    
+}
+@keyframes fadeouttxt{
+    0%,50%{
+       opacity: 0;
+       transform: translateY(10%);
+      
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+        
+    }
+}
+.backbtn{
+    width: fit-content;
+    margin-top: 0.5rem;
+    border-radius: 1.5rem;
+    height: 3rem;
+    border: none;
+    font-family: "Rajdhani",serif;
+    font-size: 1rem;
+    font-weight: 500;
+    background: linear-gradient(135deg,#4f39f6,#ff8a80);
+    background-clip: text;
+    color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    animation-name: fadebtn;
+    animation-duration: 2.5s;
+    transition: all .4s ease-in-out;
+    
+}
+.backbtn:hover{
+    transform: translateY(-5%);
+    /* transform: scale(1.05); */
+}
+@keyframes fadebtn{
+    0%,50%{
+        opacity: 0;
+        transform: translateY(20%);
+       
+     }
+     100%{
+         opacity: 1;
+         transform: translateY(0%);
+         
+     }
+}
+@keyframes fadeSlide {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+.fade-out {
+    animation: fadeSlide 0.5s forwards;
+}
+.back-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    align-items: start;
+    z-index: 0;
+}
+
+.back{
+    width: 90%;
+    position: relative;
+    left: 0%;
+    top: 0;
+    /* padding: 1rem; */
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+   
+    grid-gap: 1px;
+   
+    height: 90%;
+    
+}
+
+.back-child{
+    background: rgb(0, 0, 0,0.01);
+    backdrop-filter: blur(10px);
+    
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.main-div{
+    width: 100%;
+    height: 100dvh;
+    z-index: 1;
+    position: relative;
+    left: 0;
+    top: 0;
+    
+    
+    
+}
+.rowheight{
+    min-height: 100vh !important;
+}
+.alignment{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    
+}
+.left-div{
+    height: 90vh;
+    width: 100%;
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem 1rem 0rem 1rem;
+    gap: 1rem;
+   
+    background: #fff;
+    position: relative;
+    left: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    top: 0;
+    border-radius: 2rem;
+}
+.left-first{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+.left-sec{
+    height: 60%;
+    width: 100%;
+    /* background: black; */
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+}
+.balance-div{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    gap: 0rem;
+}
+.balance-title{
+   
+    color: rgb(108, 117, 125,0.4);
+    width: fit-content;
+    height: fit-content;
+    margin: 0 !important;
+    font-weight: 500;
+    font-family: "Rajdhani", serif;
+    font-size: 1rem;
+}
+.balance-amount{
+    color:#34d399;
+    display: flex;
+    
+    margin: 0 !important;
+    font-family: "Rajdhani", serif;
+}
+.head{
+    background: linear-gradient(to right,#4f39f6 20%,#ff8a80 80%);
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    font-family: "Rajdhani", serif;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.left-input{
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.3rem;
+    font-family: "Rajdhani", serif;
+    padding-left: 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    border: 1px solid #fff;
+    
+    transition: .4s ease;
+}
+.left-input::placeholder{
+    color: rgba(128, 128, 128, 0.591);
+    font-family: "Rajdhani", serif;
+    font-size: 0.9rem;
+}
+.left-input:focus{
+    outline: none;
+    border: 1px solid #34d399;
+}
+.date{
+    width: 100%;
+    height: 3rem;
+    
+    
+    font-family: "Rajdhani", serif;
+    display: flex;
+    justify-content: space-between;
+    padding-left: none !important;
+}
+.dateinput{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    width: 30%;
+    border-radius: 0.3rem;
+    padding-left: 0.4rem;
+    border: 2px solid #fff;
+    
+    color:  rgb(108, 117, 125, 1);
+    font-weight: 500;
+    transition: .4s ease;
+    height: 100%;
+}
+.dateinput::placeholder{
+    color: rgba(128, 128, 128, 0.591);
+    font-family: "Rajdhani", serif;
+    font-size: 0.9rem;
+}
+.dateinput:focus{
+    outline: none;
+    border: 2px solid #ff8a80;
+}
+.choose{
+    width: 100%;
+    height: 3rem;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    display: flex;
+    border-radius: 0.3rem !important;
+    overflow: hidden;
+    justify-content: space-between;
+}
+.choose-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    font-weight: 500;
+    transition: all .4s ease;
+    align-items: center;
+    justify-content: center;
+    
+}
+.active{
+    width: 50%;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #34d399;
+}
+.choose-right{
+    
+    width: 50%;
+    font-weight: 500;
+  
+    transition: all .4s ease;
+    height: 100%;
+    display: flex;
+    border-left: 2px solid rgba(128, 128, 128, 0.118) ;
+    align-items: center;
+    justify-content: center;
+}
+
+.option{
+    display: none;
+  }
+ 
+  .label{
+    font-family: "Rajdhani", serif;
+    text-transform: capitalize;
+    
+    color: rgb(108, 117, 125, 0.7);
+  }
+  .incometext{
+    color: #fff;
+    font-family: "Rajdhani", serif;
+    text-transform: capitalize;
+  }
+  .option:checked + .label{
+    border: none;
+    color: #fff;
+    background: none;
+    
+  }
+ .submit-button-container{
+    width: 100%;
+    position: relative;
+    height: 30%;
+    /* background: black;   */
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    padding-bottom: 1rem ;
+ }
+ .submit-button{
+    width: 100%;
+    height: 3rem;
+    border: none;
+    
+    color: #4f39f6;
+    font-weight: 500;
+    border-top-right-radius: 0.3rem;
+    border-top-left-radius: 0.3rem;
+    border-bottom-right-radius:1rem;
+    border-bottom-left-radius: 1rem;
+    font-family: "Rajdhani", serif;
+    text-transform: capitalize;
+    position: relative;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+   transition: all .4s ease;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+ }
+ 
+ .submit-button:hover{
+    color: #fff !important;
+ }
+ .addbtntxt{
+    background: linear-gradient(to right,#4f39f6 20%,#ff8a80 80%);
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+ }
+.right-main{
+    
+       background: hwb(0 100% 0%);
+       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+       backdrop-filter: blur(0.05rem);
+    height: 90%;
+    width: 100%;
+    padding: 1rem;
+  
+    border-radius: 1rem;
+    position: relative;
+    overflow-y:scroll ;
+    scrollbar-width: none;
+    left: 0;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+   
+}
+
+.right-div{
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.incomeTrans , .expenseTrans{
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    margin-bottom: 0.5rem;
+    align-items: end;
+}
+.incomeTransCont::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(128, 128, 128, 0.118);
+}
+.expenseTransCont::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(128, 128, 128, 0.118);
+}
+.incomeTransCont{
+    
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    align-items: end;
+    justify-content: space-between;
+    animation-name: appear;
+    animation-duration: 1s;
+}
+
+@keyframes appear{
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.delete-but{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    
+    border: none;
+  background: none;
+  color: rgb(108, 117, 125,0.4);
+    opacity: 1;
+    transition: all .4s ease;
+    right: 0;
+  transition: color .3s ease-in-out;
+}
+.delete-but:hover{
+    color: #ff8a80;
+}
+.inctext{
+    color: #34d399;
+    text-transform: capitalize;
+    font-family: "Rajdhani", serif;
+    margin-right: 2rem;
+    margin-bottom: 0 !important;
+}
+
+.nodeDate{
+    height: fit-content;
+    margin-bottom: 0 !important;
+    font-size: 0.7rem;
+    color: rgb(108, 117, 125,0.7);
+    font-family: "Rajdhani", serif;
+}
+.expenseTransCont{
+    display: flex;
+    width: 100%;
+    position: relative;
+ 
+    height: fit-content;
+    /* border-bottom: 1px solid rgba(128, 128, 128, 0.118); */
+    align-items: end;
+    animation-name: appear;
+    animation-duration: 1s;
+    justify-content: space-between;
+}
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.exptext{
+    color: #ff8a80;
+    margin-bottom: 0 !important;
+    margin-right: 2rem;
+    text-transform: capitalize;
+    font-family: "Rajdhani", serif;
+}
+
+
+@media screen and (max-width: 768px) {
+body{
+    height: fit-content;
+    justify-content: center !important;
+    align-items: center !important;
+}
+    .main-div{
+        height: fit-content;
+        
+    }
+    .alignment{
+        align-items: stretch;
+        
+    }
+    .left-div{
+        margin-top: 1rem;
+        min-height: 80vh !important;
+     height: 80vh !important;
+    }
+    
+    
+   
+}
+
+
